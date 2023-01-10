@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MAD GROUP ASSIGNMENT</string>
+    <string name="b_logster">B.Logster</string>
+    <string name="signup"><b><i>Sign Up</i></b></string>
+    <string name="signin"><b><i>Sign In</i></b></string>
+    <string name="register"><b><i>Register</i></b></string>
+    <string name="login"><b><i>Login<b><b></b></b></i></b></string>
+    <string name="username"><b><i>Username<b><b></b></b></i></b></string>
+    <string name="password"><b><i>Password<b><b></b></b></i></b></string>
+    <string name="email"><b><i>Email<b><b></b></b></i></b></string>
+    <string name="address"><b><i>Address<b><b></b></b></i></b></string>
+    <string name="rpassword"><b><i>Repeat Password<b><b></b></b></i></b></string>
+</resources>
