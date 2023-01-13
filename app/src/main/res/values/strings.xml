@@ -1,4 +1,8 @@
 <resources>
+    <string name="navigation_drawer_open">Open Navigation drawer</string>
+    <string name="navigation_drawer_close">Close Navigation drawer</string>
+    <string name="men_drawer_open">Drawer Open</string>
+    <string name="men_drawer_close">Drawer Close</string>
     <string name="app_name">MAD GROUP ASSIGNMENT</string>
     <string name="b_logster">B.Logster</string>
     <string name="signup"><b><i>Sign Up</i></b></string>

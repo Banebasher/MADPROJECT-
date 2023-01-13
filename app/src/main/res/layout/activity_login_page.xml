@@ -7,9 +7,16 @@
     tools:context=".LoginPage"
     android:background="@drawable/loginpage">
 
-
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/login_photo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:shapeAppearanceOverlay="@style/roundimage"/>
     <EditText
-    android:id="@+id/login_username"
+    android:id="@+id/logine_email"
     android:layout_width="match_parent"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
@@ -17,11 +24,11 @@
     android:background="@drawable/edittextshape"
     android:layout_centerHorizontal="true"
     android:layout_marginTop="190dp"
-    android:drawableLeft="@drawable/ic_baseline_person_24"
+    android:drawableLeft="@drawable/person"
     android:drawablePadding="20dp"
         android:paddingLeft="20dp"
     android:textColorHint="@color/coolpurple"
-    android:hint="Username"
+    android:hint="Email"
     android:textSize="25dp"
         android:textStyle="italic"
         android:textColor="@color/coolpurple"
@@ -32,7 +39,7 @@
         android:textColor="@color/coolpurple"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_below="@id/login_username"
+        android:layout_below="@id/logine_email"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
@@ -73,5 +80,15 @@
         android:textColor="@color/white"
         android:textStyle=""
         android:textSize="30sp"/>
+
+    <ProgressBar
+        android:id="@+id/loginprogress"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_below="@id/login_password"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="223dp"
+        android:layout_marginBottom="50dp"/>
 
 </RelativeLayout>

@@ -3,12 +3,25 @@ package com.example.madgroupassignment;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 
-public class Lobby extends AppCompatActivity {
+import com.example.madgroupassignment.databinding.ActivityLobbyBinding;
+
+
+public class Lobby extends DrawerBaseAcitivity {
+ActivityLobbyBinding activityLobbyBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lobby);
+
+        activityLobbyBinding = ActivityLobbyBinding.inflate(getLayoutInflater());
+        allocateActivityTitle("LOBBY");
+        super.setContentView(activityLobbyBinding.getRoot());
+
+
+
+
+
     }
 }
