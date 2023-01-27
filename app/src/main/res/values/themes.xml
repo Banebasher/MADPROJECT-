@@ -13,12 +13,52 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
     <style name="roundimage" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">65dp</item>
     </style>
+
     <style name="roundprofile" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">40dp</item>
     </style>
+
+    <style name="smallimages" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">25dp</item>
+    </style>
+
+    <style name="images60dp" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">30dp</item>
+    </style>
+
+    <style name="images42dp" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">21dp</item>
+    </style>
+
+    <style name="images300dp" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">150dp</item>
+    </style>
+    <style name="images20dp" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+    <style name="images36dp" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">18dp</item>
+    </style>
+
+
+    <style name="Theme.MADGROUPASSIGNMENT.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MADGROUPASSIGNMENT.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MADGROUPASSIGNMENT.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

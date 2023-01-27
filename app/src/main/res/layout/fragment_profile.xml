@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".Fragment.ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+<ImageView
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:src="@drawable/purple_background"
+    android:scaleType="centerCrop"
+    />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:theme="@style/roundprofile"
+        android:id="@+id/profileprofilephoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/bensonraresight"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="87dp"
+        android:layout_marginLeft="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ edit profile"
+        android:textColor="@color/gray"
+        android:layout_marginTop="187dp"
+        android:layout_marginLeft="45dp"
+        android:textSize="10dp"/>
+
+    <TextView
+        android:id="@+id/profileusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Benson"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="140dp"/>
+    <TextView
+        android:id="@+id/profileemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="benson@gmail.com"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="140dp"/>
+
+    <FrameLayout
+        android:id="@+id/profilecontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@color/coolpurple"
+        android:layout_marginTop="200dp"
+        app:menu="@menu/bottom_navigation_bar"
+        android:visibility="visible"
+        app:backgroundTint="@color/black"
+        app:itemTextColor="@color/coolpurple"
+       />
+
+</FrameLayout>

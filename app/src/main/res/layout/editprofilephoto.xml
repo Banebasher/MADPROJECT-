@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/redditgray">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/bradpittprofile"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/bradpitt"
+        android:theme="@style/images300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/saveprofilebutton"
+    android:layout_width="190dp"
+    android:layout_height="60dp"
+    android:layout_below="@id/bradpittprofile"
+    android:text="Save"
+android:layout_alignParentRight="true"
+    android:layout_marginRight="6dp"
+    android:layout_marginTop="20dp"
+    android:background="@color/coolpurple"
+    android:textColor="@color/white"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/editprofilephotobutton"
+        android:layout_width="190dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/bradpittprofile"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="20sp"
+        android:background="@color/teal_700"
+        android:text="Edit Profile"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

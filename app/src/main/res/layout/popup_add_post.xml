@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/titlepost"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/white"
+        android:hint="Title:"
+        android:inputType="textPersonName"
+        android:textColor="@color/redditgray"
+        android:textSize="20sp"
+        android:layout_toLeftOf="@id/profilepost"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profilepost"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="-48dp"
+        android:scaleType="centerCrop"
+       android:background="@drawable/bensonraresight"
+        android:theme="@style/smallimages"
+        />
+
+    <EditText
+        android:id="@+id/descpost"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/titlepost"
+        android:background="@color/white"
+        android:hint="Description:"
+        android:inputType="textPersonName"
+        android:textColor="@color/redditgray"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/titlepost"
+        tools:layout_editor_absoluteX="88dp" />
+
+    <ImageView
+        android:id="@+id/postlayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/descpost"
+        android:scaleType="centerCrop"
+        android:src="@drawable/chooseimage"
+       />
+    <ProgressBar
+        android:padding="5dp"
+        android:id="@+id/progresspost"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/postlayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-42dp"
+        android:background="@drawable/circle"/>
+    <ImageButton
+        android:id="@+id/createpost"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/postlayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-42dp"
+        android:background="@drawable/buttonshape"
+        android:src="@drawable/editbutton" />
+
+
+</RelativeLayout>

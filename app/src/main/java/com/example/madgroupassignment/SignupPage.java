@@ -93,8 +93,7 @@ public class SignupPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                register.setVisibility(View.INVISIBLE);
-                loadingProgress.setVisibility(View.VISIBLE);
+              progresssuccess();
 
 
                 String username, email, password, repeatpassword, phone;
@@ -105,50 +104,39 @@ public class SignupPage extends AppCompatActivity {
                 phone = signupphone.getText().toString();
                 if (username.isEmpty()) {
                     showError(signupuser, "Please enter username");
-                    register.setVisibility(View.VISIBLE);
-                    loadingProgress.setVisibility(View.INVISIBLE);
+                    progressfailure();
                 } else if (username.length() < 7) {
                     showError(signupuser, "Username must be > 7 characters");
-                    register.setVisibility(View.VISIBLE);
-                    loadingProgress.setVisibility(View.INVISIBLE);
+                    progressfailure();
                 } else if (email.isEmpty()) {
                     showError(signupemail, "Please enter email");
-                    register.setVisibility(View.VISIBLE);
-                    loadingProgress.setVisibility(View.INVISIBLE);
+                    progressfailure();
                 } else if (!email.contains("@")) {
                     showError(signupemail, "Email is invalid (@)");
-                    register.setVisibility(View.VISIBLE);
-                    loadingProgress.setVisibility(View.INVISIBLE);
+                    progressfailure();
                 } else if (phone.isEmpty()) {
                     showError(signupphone, "Please enter phone");
-                    register.setVisibility(View.VISIBLE);
-                    loadingProgress.setVisibility(View.INVISIBLE);
+                    progressfailure();
                 } else if (password.isEmpty()) {
                     showError(signuppassword, "Please enter password");
-                    register.setVisibility(View.VISIBLE);
-                    loadingProgress.setVisibility(View.INVISIBLE);
+                    progressfailure();
                 } else if (password.length() < 7) {
                     showError(signuppassword, "Username must be > 7 characters");
-                    register.setVisibility(View.VISIBLE);
-                    loadingProgress.setVisibility(View.INVISIBLE);
+                    progressfailure();
                 } else if (repeatpassword.isEmpty()) {
                     showError(signuprepeatpassword, "Please repeat Password");
-                    register.setVisibility(View.VISIBLE);
-                    loadingProgress.setVisibility(View.INVISIBLE);
+                    progressfailure();
                 } else if (!password.equals(repeatpassword)) {
                     showError(signuprepeatpassword, "Password doesn't match");
-                    register.setVisibility(View.VISIBLE);
-                    loadingProgress.setVisibility(View.INVISIBLE);
+                   progressfailure();
                 } else if (password.equals(repeatpassword)
                         && profilephoto.getDrawable() != null && imagepath != null) {
                     createAccount(email, username, password,phone);
-                    register.setVisibility(View.INVISIBLE);
-                    loadingProgress.setVisibility(View.VISIBLE);
+                   progresssuccess();
 
                 } else
                     Toast.makeText(getApplicationContext(), "Please fill all the fields or Select Image", Toast.LENGTH_SHORT).show();
-                register.setVisibility(View.VISIBLE);
-                loadingProgress.setVisibility(View.INVISIBLE);
+              progressfailure();
 
             }
 
@@ -183,12 +171,11 @@ public class SignupPage extends AppCompatActivity {
                             //     showMessage("Account Created Successfully");
                             //update user info
                             updateuserinfo(username,phone, imagepath, auth.getCurrentUser());
-                            updateUI();
+
 
                         } else {
                             showMessage("Account Failed to Create" + task.getException().getMessage());
-                            register.setVisibility(View.VISIBLE);
-                            loadingProgress.setVisibility(View.INVISIBLE);
+                            progressfailure();
 
                         }
                     }
@@ -294,5 +281,16 @@ public class SignupPage extends AppCompatActivity {
     private void showMessage(String Msg)
     {
         Toast.makeText(getApplicationContext(), Msg, Toast.LENGTH_SHORT).show();
+    }
+
+    public void progresssuccess()
+    {
+        loadingProgress.setVisibility(View.INVISIBLE);
+        register.setVisibility(View.VISIBLE);
+    }
+    public void progressfailure()
+    {
+        loadingProgress.setVisibility(View.INVISIBLE);
+        register.setVisibility(View.VISIBLE);
     }
 }

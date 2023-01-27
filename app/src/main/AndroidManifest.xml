@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package = "com.example.madgroupassignment">
-
+    package="com.example.madgroupassignment">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -13,7 +12,6 @@
     <uses-permission android:name="android.permission.LOCATION_HARDWARE.camera" />
     <uses-permission android:name="android.hardware.camera.autofocus" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
 
     <application
         android:allowBackup="true"
@@ -26,9 +24,18 @@
         android:theme="@style/Theme.MADGROUPASSIGNMENT"
         tools:targetApi="31">
         <activity
-            android:name=".AboutPage"
+            android:windowSoftInputMode="adjustResize"
+            android:name=".PostDetailActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Home"
             android:exported="false"
-            android:label="About">
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.MADGROUPASSIGNMENT.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -42,6 +49,14 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".AboutPage"
+            android:exported="false"
+            android:label="About">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".DrawerBaseAcitivity"
             android:exported="false">
             <meta-data
@@ -50,7 +65,7 @@
         </activity>
         <activity
             android:name=".Lobby"
-            android:exported="false"
+            android:exported="true"
             android:label="Lobby">
             <meta-data
                 android:name="android.app.lib_name"
